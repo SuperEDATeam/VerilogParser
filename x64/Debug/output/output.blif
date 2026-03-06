@@ -1,0 +1,17 @@
+.model carry
+.inputs a b c
+.outputs cout a_shift_b a_equal_b
+.names a b temp_0
+11 1
+.names temp_0 a_shift_b
+1 1
+.names a b a_equal_b
+00 1
+11 1
+.names temp_0 c x
+11 1
+.names x c b cout
+1-- 1
+-1- 1
+--1 1
+.end

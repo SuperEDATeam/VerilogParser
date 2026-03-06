@@ -1,0 +1,15 @@
+Module: carry
+  Modname: carry
+  Wires: 
+    a
+    a_equal_b
+    a_shift_b
+    b
+    c
+    cout
+    x
+  Gates: 
+    a_shift_b = a & b
+    a_equal_b = a | b
+    x = a & b & c
+    cout = x | c | b

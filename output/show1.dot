@@ -1,0 +1,34 @@
+digraph "carry" {
+label="carry";
+rankdir="LR";
+remincross=true;
+n1 [ shape=octagon, label="a" ];
+n2 [ shape=octagon, label="a_equal_b" ];
+n3 [ shape=octagon, label="a_shift_b" ];
+n4 [ shape=octagon, label="b" ];
+n5 [ shape=octagon, label="c" ];
+n6 [ shape=octagon, label="cout" ];
+n7 [ shape=diamond, label="x" ];
+c11 [ shape=record, label="{{<p8>A|<p9>B}|$1\n$ AND|{<p10>Y}}", ];
+c12 [ shape=record, label="{{<p8>A|<p9>B}|$2\n$ OR|{<p10>Y}}", ];
+c13 [ shape=record, label="{{<p8>A|<p9>B}|$3\n$ AND|{<p10>Y}}", ];
+c14 [ shape=record, label="{{<p8>A|<p9>B}|$4\n$ AND|{<p10>Y}}", ];
+c15 [ shape=record, label="{{<p8>A|<p9>B}|$5\n$ OR|{<p10>Y}}", ];
+c16 [ shape=record, label="{{<p8>A|<p9>B}|$6\n$ OR|{<p10>Y}}", ];
+c11:p10:e -> n3:w;
+c12:p10:e -> n2:w;
+c13:p10:e -> c14:p9:w;
+c14:p10:e -> n7:w;
+c15:p10:e -> c16:p9:w;
+c16:p10:e -> n6:w;
+n1:e -> c11:p8:w;
+n1:e -> c12:p8:w;
+n1:e -> c14:p8:w;
+n4:e -> c11:p9:w;
+n4:e -> c12:p9:w;
+n4:e -> c13:p8:w;
+n4:e -> c15:p9:w;
+n5:e -> c13:p9:w;
+n5:e -> c15:p8:w;
+n7:e -> c16:p8:w;
+}
