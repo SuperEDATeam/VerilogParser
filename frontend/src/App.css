@@ -1,0 +1,204 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.upload-form {
+  margin: 20px 0;
+}
+
+.upload-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.file-input {
+  flex: 1;
+  padding: 10px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.error-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+}
+
+.result-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.image-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.result-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.result-image:hover {
+  transform: scale(1.02);
+}
+
+.image-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.view-button, .download-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.view-button {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.view-button:hover {
+  background-color: #357abd;
+}
+
+.download-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.download-button:hover {
+  background-color: #218838;
+}
+
+/* 添加响应式设计 */
+@media (max-width: 768px) {
+  .image-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .view-button, .download-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 添加加载动画 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.result-image {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* 添加图片加载状态 */
+.image-loading {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.image-loading::after {
+  content: "加载中...";
+  color: #666;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-family: monospace;
+}
+
+/* RTLIL code block */
+.rtlil-block {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  border: 1px solid #313244;
+  max-height: 500px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.subtitle {
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.file-name {
+  margin-top: 8px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+} 
